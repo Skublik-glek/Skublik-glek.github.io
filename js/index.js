@@ -13,8 +13,8 @@ button.addEventListener('click', function(){
   } 
   var paramsString = document.location.search; // ?payurl=1
   var searchParams = new URLSearchParams(paramsString);
-  var newurl = searchParams.get("payurl");
-  if (newurl != "") {
+  var newurl = document.location.search.slice(8);
+  if (newurl != "" && newurl != undefined) {
     document.location.href = newurl;
   }
   else {
