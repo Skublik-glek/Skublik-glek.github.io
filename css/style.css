@@ -1,0 +1,77 @@
+body {
+  text-align: center;
+}
+
+.container {
+  width: 120px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+path {
+  stroke-dasharray: 99.47578430175781;
+  stroke-dashoffset: -99.47578430175781;
+  fill: transparent;
+}
+
+svg.animate path {
+  animation: 1.7s ease forwards draw;
+  opacity:1;
+}
+
+@keyframes draw {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: -99.47578430175781;
+    fill: transparent;
+    transform: translateY(0);
+  }
+  
+  35% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  
+  60% {
+    fill: #3da35a;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  100% {
+    fill: #3da35a;
+    stroke-dashoffset: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+button {
+  cursor: pointer;
+  min-width: 400px;
+  padding: 15px 5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background: #3da35a;
+  border: none;
+  color: #ffffff;
+  font-weight: 1000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(56,100,38);
+  transition: all 1s;
+}
+
+button:hover {
+  box-shadow: 0 0 25px rgb(56,100,38);
+}
+
+button:focus {
+  outline: none;
+}
+
